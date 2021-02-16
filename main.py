@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from prettytable import PrettyTable
 
-
 # plot's dots coordinates
 x = []
 y = []
@@ -46,6 +45,8 @@ def build_plot():
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_position('center')
     ax.spines['bottom'].set_position('center')
+    ax.spines['left'].set_position(('data', 0.0))
+    ax.spines['bottom'].set_position(('data', 0.0))
     plt.show()
 
 
