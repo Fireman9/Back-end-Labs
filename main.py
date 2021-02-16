@@ -32,7 +32,12 @@ def printTable(x, y):
 
 # Build plot
 def buildPlot(x, y):
-    plt.plot(x, y, 'k')
+    ax = plt.subplot()
+    ax.plot(x, y, 'k')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_position('center')
+    ax.spines['bottom'].set_position('center')
     plt.show()
 
 
